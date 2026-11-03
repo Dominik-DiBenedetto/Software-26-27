@@ -8,7 +8,7 @@ Node should contain:
     Common misconceptions.
     Examples.
 """
-import uuid, dataclasses
+import dataclasses
 from enums.category import Category
 
 @dataclasses.dataclass
@@ -17,7 +17,7 @@ class Node:
     name: str
     definition: str
     category: Category
-    equations: [str]
-    examples: [str]
+    equations: list[str]
+    examples: list[str]
     difficulty: int
     metadata: dict

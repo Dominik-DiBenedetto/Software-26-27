@@ -11,5 +11,5 @@ class Edge:
     description: str
     relationship: relationship_type.RelationshipType
     conditions: list
-    metadata: dict or None
-    equation: str or None
+    equation: str
+    metadata: dict
