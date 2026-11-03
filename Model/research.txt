@@ -1,0 +1,32 @@
+Reasoning Analysis System:
+    Goal: Identify Missing concept, Missing connection, incorrect concept, logical
+        inconsistency, unsupported conclusions, incomplete explanations.
+
+Knowledege Graphs: 
+    Why?
+        - GraphRAG: helps to ground AI in verifiable facts to limit hallucinations
+        - Traverse relationships impractical by keyword searches
+        - Traceable for how model reached conclusion (may be helpful for development)
+
+    - Use schema.org?
+
+    “What Is a Knowledge Graph?” Web.Stanford.Edu, https://web.stanford.edu/class/cs520/2020/notes/What_is_a_Knowledge_Graph.html. Accessed 2 Nov. 2026.
+        - Given a set of nodes N, and a set of labels L, a knowledge graph is a 
+        subset of the cross product N × L × N. Each member of this set is 
+        referred to as a triple.
+
+    Curry, Brian James. “Building a Knowledge Graph: A Comprehensive End-to-End Guide Using Modern Tools.” Medium, 17 Jan. 2026, https://medium.com/@brian-curry-research/building-a-knowledge-graph-a-comprehensive-end-to-end-guide-using-modern-tools-e06fe8f3b368. Accessed 2 Nov. 2026.
+        - A  structured way of organizing information as a network of real-world objects, 
+        events, or concepts (called nodes) and the connections between them 
+        (called edges). Unlike traditional tables, knowledge graphs
+        link related ideas together to mimic human memory.
+
+        Building a knowledge graph involves six major phases:
+            - Data Acquisition & Preparation
+            - Entity Extraction
+            - Relationship Extraction
+            - Entity Resolution & Linking
+            - Graph Storage
+            - Querying & Application Integration
+     
+     Schema should be physics concepts

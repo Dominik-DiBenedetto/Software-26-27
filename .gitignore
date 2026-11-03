@@ -1,0 +1,3 @@
+.git/
+.venv/
+*.cpython-310.pyc

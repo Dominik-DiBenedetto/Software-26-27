@@ -1,0 +1,22 @@
+Input (string):
+    - The user will provide input in the form of an explanation of topics covered
+    in lecture materials. The input will be an audio recording that gets converted
+    to text.
+Concept extraction:
+    - Identify claims, concepts, definitions, and relationships
+    - Look for key vocabulary and keywords
+Reasoning analysis
+    - Evaluate logical connections, missing steps, misconceptions, and unsupported conclusions.
+Knowledge Gap Identification
+Targeted Feedback
+    - Share what parts were missed
+    - Bring to attention areas where they became vague which may be from a lack of
+        understanding.
+    - Ask questions for them to answer to help guide their "repair"
+
+Extra important feature:
+    - For feedback purposes, the model should be able to distinguish between information
+    that was not covered in the explanation and concepts that were misunderstood.
+    - If a concept was simply left out, the feedback should state what topic was
+    missed and prompt the user to submit a supplemental explanation including
+    that topic before giving the final grade.
