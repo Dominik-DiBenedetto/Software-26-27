@@ -13,3 +13,6 @@ class Edge:
     conditions: list
     equation: str
     metadata: dict
+
+    def __str__(self):
+        return f"Edge({self.source_node_id}->{self.target_node_id})"

@@ -42,7 +42,47 @@ class KnowledgeGraph:
         return
     def retrieve_edge(self, source_node_id=None, target_node_id=None, edge_id=None):
         if source_node_id and self.retrieve_node(source_node_id) and target_node_id and self.retrieve_node(target_node_id):
-            edge = self.graph.edges[source_node_id, target_node_id]
-            return edge and edge["attr"]
+            edge = self.graph.edges.get((source_node_id, target_node_id))
+            return edge and edge.get("attr")
         elif edge_id:
             return
+
+    def get_predecessors(self, node_id):
+        predecessors = []
+        for key in self.graph.predecessors(node_id):
+            node = self.retrieve_node(node_id)
+            if node == None: continue
+            predecessors.append(node)
+        return predecessors
+
+    def get_successors(self, node_id):
+        successors = []
+        for key in self.graph.successors(node_id):
+            node = self.retrieve_node(node_id)
+            if node == None: continue
+            successors.append(node)
+        return successors
+
+    def get_neighbors(self, node_id):
+        neighbors = []
+        for key in self.graph.neighbors(node_id):
+            node = self.retrieve_node(node_id)
+            if node == None: continue
+            neighbors.append(node)
+        return neighbors
+    
+    def get_incoming_edges(self, node_id):
+        edges = []
+        for edge in self.graph.in_edges(node_id, True):
+            attr = edge[2]
+            if attr == None: continue
+            edges.append(attr)
+        return edges
+
+    def get_outgoing_edges(self, node_id):
+        edges = []
+        for edge in self.graph.out_edges(node_id, True):
+            attr = edge[2]
+            if attr == None: continue
+            edges.append(attr)
+        return edges

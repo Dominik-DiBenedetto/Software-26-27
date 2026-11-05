@@ -21,3 +21,6 @@ class Node:
     examples: list[str]
     difficulty: int
     metadata: dict
+
+    def __str__(self):
+        return f"Node({self.id}/{self.name})"
